@@ -30,8 +30,8 @@ See the [API referece](https://github.com/bitpay/bitcore-wallet-client) for more
 ```javascript
 angular.module('myApp').factory('myService', 
   function(bwcService) {
-    var myWalletData; // e.g. getting from localStorage
-    bwcService.getStatus(myWalletData, function(err, res) {
+    var credential = getCredentials(); // e.g. from localStorage
+    bwcService.getStatus(credentials, function(err, res) {
       console.log(res);
     });
   }
